@@ -7,6 +7,22 @@
     <title>Document</title>
 </head>
 <body>
+    <script>
+        fetch('https://github.com/nohheeyeon/dataVisualization/blob/main/data.json')
+        .then(data => data.json())
+        .then(data => {
+            const orderPopulation = document.createElement('o1')
+            for (const i of data) {
+                const local = document.creat.createElement('li')
+                local.innerText = i.지역이름 + i.인구
+                orderPopulation.append(local)
+            }
+            body.append(orderPopulation)
+        })
+        .catch(error => {
+            alert('데이터가 읽히지 않습니다.')
+        })
+    </script>
     
 </body>
 </html>
