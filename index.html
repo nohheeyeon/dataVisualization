@@ -8,12 +8,13 @@
 </head>
 <body>
     <script>
-        fetch('https://raw.githubusercontent.com/nohheeyeon/dataVisualization/main/data.json')
+       fetch('https://raw.githubusercontent.com/nohheeyeon/dataVisualization/main/data.json')
         .then(data => data.json())
         .then(data => {
-            const orderPopulation = document.createElement('o1')
+            const body = document.querySelector('body')
+            const orderPopulation = document.createElement('ol')
             for (const i of data) {
-                const local = document.creat.createElement('li')
+                const local = document.createElement('li')
                 local.innerText = i.지역이름 + i.인구
                 orderPopulation.append(local)
             }
